@@ -386,12 +386,13 @@ acomoda/
 └── pruebas/                  pruebas automáticas (pytest)
 ```
 
-## 14. Versión web (Railway)
+## 14. Versión web (Render o Railway)
 
 - La app se publica tal cual con el `Dockerfile` y el `railway.json` incluidos. Los pasos detallados para usarla y
   publicarla están en **TUTORIAL.md**, que también se ve dentro de la web (botón **📘 Tutorial** o `?vista=tutorial`).
 - **El progreso se guarda solo** en el servidor, por proyecto: el enlace lleva `?p=CODIGO`. Recargar la página no
-  borra nada. En Railway monte un volumen en `/data` para que los proyectos sobrevivan a cada nueva versión.
+  borra nada. Si existe la variable `DATABASE_URL` (Postgres de Render o Railway) se guarda en la tabla
+  `acomoda_proyectos`; si no, en `datos_procesados/proyectos/`. El `render.yaml` crea la app y el Postgres gratuito.
 - Los datos reales (`datos_entrada/`) **no se suben** al repositorio (ver `.gitignore`); en la web, los botones
   "Usar el catálogo/reporte de prueba" solo aparecen si esos archivos existen.
 - El paso 7 muestra primero el recuadro **🎯 Decisión** (qué hacer, por qué, cuatro cifras y los siguientes pasos);

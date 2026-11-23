@@ -141,20 +141,32 @@ paga la inversión. Consiga cotizaciones reales, cámbielas en el Paso 8 y vea s
 
 ---
 
-## Para quien administra la app: publicarla en Railway
+## Para quien administra la app: publicarla en Render (gratis, con Postgres)
 
-1. Suba esta carpeta a un repositorio de GitHub. El archivo `.gitignore` evita que se suban los datos reales de la
-   empresa (`datos_entrada/`) y los resultados.
-2. En [railway.com](https://railway.com) → **New Project** → **Deploy from GitHub repo** → elija el repositorio.
-   Railway encuentra el `Dockerfile` y el `railway.json` y construye la app solo (la primera vez tarda unos 5 minutos).
-3. **Para que los proyectos no se pierdan al actualizar la app:** en el servicio → **Settings → Volumes** (o clic
-   derecho → *Attach volume*) → cree un volumen montado en **`/data`**. Sin volumen, cada nueva versión borra los
-   proyectos guardados.
-4. **Dominio:** servicio → **Settings → Networking → Generate Domain** (le da una dirección `…up.railway.app`), o
-   **Custom Domain** para usar el suyo (agregue el registro CNAME que Railway le indique en su proveedor de dominio).
-5. Abra el dominio. El tutorial está en la misma web: botón **📘 Tutorial** en la barra izquierda, o directamente en
-   `https://SU-DOMINIO/?vista=tutorial`.
-6. Variables opcionales (servicio → **Variables**): `ACOMODA_DIAS_CONSERVAR` (días que se guardan los proyectos,
-   60 por defecto).
+El repositorio trae un archivo `render.yaml` que crea **la app y su base de datos Postgres gratuita** de una vez.
 
-Recomendación de plan: al menos 2 GB de RAM (el reporte de ventas grande y la optimización la usan).
+1. Entre a [render.com](https://render.com) e inicie sesión con su cuenta de GitHub.
+2. **New → Blueprint** → elija el repositorio `ACOMODA` → **Apply**. Render crea dos cosas:
+   - `acomoda` (la app web, plan gratuito);
+   - `acomoda-db` (Postgres gratuito, donde se guarda el progreso de cada proyecto).
+
+   La primera construcción tarda de 5 a 10 minutos.
+3. Abra la dirección que Render le da (`https://acomoda-xxxx.onrender.com`). El tutorial está en la misma web:
+   botón **📘 Tutorial** o `https://SU-DOMINIO/?vista=tutorial`.
+4. **Dominio propio (opcional):** servicio `acomoda` → **Settings → Custom Domains** → agregue su dominio y cree en su
+   proveedor el registro CNAME que Render le indique.
+
+### Lo que hay que saber del plan gratuito de Render
+
+| Límite | Qué significa para usted |
+|---|---|
+| La app **se duerme tras 15 minutos** sin visitas | La primera visita después tarda ~1 minuto en abrir. El progreso no se pierde (está en Postgres). |
+| **512 MB de memoria** | Reportes de ventas muy grandes o la optimización completa pueden hacer que la app se reinicie. Si pasa, use la *Propuesta rápida* o suba el plan del servicio web (Starter). |
+| **El Postgres gratuito vence a los 30 días** de creado (luego hay 14 días de gracia y se borra) | Antes de que venza: pase la base a un plan pagado, **o** cree otra base gratuita y cambie la variable `DATABASE_URL` del servicio. Los proyectos guardados en la base vieja se pierden si no la mejora. |
+| Base de **1 GB** | Alcanza para decenas de proyectos. Los proyectos sin abrir en 25 días se borran solos (variable `ACOMODA_DIAS_CONSERVAR`). |
+| 750 horas gratis al mes | Suficiente para una app que se duerme cuando no se usa. |
+
+### Alternativa: Railway
+
+También funciona en Railway (archivos `Dockerfile` y `railway.json`): **New Project → Deploy from GitHub repo**, agregue
+un Postgres (**+ New → Database → PostgreSQL**) y en el servicio cree la variable `DATABASE_URL` = `${{Postgres.DATABASE_URL}}`.
