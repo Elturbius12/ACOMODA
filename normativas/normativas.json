@@ -1,0 +1,183 @@
+{
+  "_nota": "Normas incluidas en Acomoda. Solo la RM 375-2008-TR está verificada. Las demás están 'por verificar': confirme cada valor en el texto oficial vigente (ver LEEME.md) y cambie 'estado' a 'verificada' y 'fecha_revision' a la fecha en que lo hizo.",
+  "normas": [
+    {
+      "id": "ergonomia",
+      "nombre": "Norma Básica de Ergonomía y de Procedimiento de Evaluación de Riesgo Disergonómico",
+      "numero": "RM 375-2008-TR",
+      "aplica_a": "Manipulación manual de cargas al colocar y retirar productos de los estantes.",
+      "regla_modelo": "Peso por unidad manipulada ≤ {limite_peso_kg} kg. Lo que pese más solo puede ir en el nivel del piso y si el local tiene transpaleta, apilador o montacargas.",
+      "tipo": "obligatoria",
+      "fuente": "https://busquedas.elperuano.pe/ (buscar: RM 375-2008-TR)",
+      "estado": "verificada",
+      "fecha_revision": "2026-11-16",
+      "activa": true,
+      "rubros": null,
+      "parametros": {
+        "limite_peso_kg": {
+          "valor": 25,
+          "unidad": "kg",
+          "opciones": [15, 25, 40],
+          "descripcion": "25 kg referencia general; 15 kg con mayor protección (mujeres, menores, trabajadores con limitaciones); 40 kg para personal entrenado en situaciones aisladas."
+        }
+      }
+    },
+    {
+      "id": "sst",
+      "nombre": "Ley de Seguridad y Salud en el Trabajo y su reglamento",
+      "numero": "Ley 29783; DS 005-2012-TR (modificado por DS 006-2014-TR)",
+      "aplica_a": "Marco general: orden, accesos despejados y prevención de riesgos en el almacén.",
+      "regla_modelo": "Se eliminan los tramos de estante a menos de {despeje_tablero_m} m de un tablero eléctrico y los que invaden el pasillo mínimo de {ancho_pasillo_min_m} m.",
+      "tipo": "obligatoria",
+      "fuente": "https://busquedas.elperuano.pe/ (buscar: Ley 29783 y DS 005-2012-TR)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {
+        "despeje_tablero_m": {"valor": 1.0, "unidad": "m", "descripcion": "Espacio libre frente a tableros eléctricos. Confirmar en la norma (y en el Código Nacional de Electricidad)."},
+        "ancho_pasillo_min_m": {"valor": 0.9, "unidad": "m", "descripcion": "Ancho libre mínimo de pasillo de trabajo. Confirmar en la norma."}
+      }
+    },
+    {
+      "id": "incendios",
+      "nombre": "Seguridad durante la construcción y el uso: requisitos de seguridad (evacuación e incendios)",
+      "numero": "Norma A.130 del Reglamento Nacional de Edificaciones",
+      "aplica_a": "Rutas de evacuación, salidas de emergencia y rociadores.",
+      "regla_modelo": "Nada puede bloquear una salida de emergencia ni quedar a menos de {despeje_salida_m} m de ella; pasillos de evacuación ≥ {ancho_evacuacion_m} m; la mercadería queda {despeje_rociador_m} m por debajo de los rociadores.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/vivienda (Reglamento Nacional de Edificaciones, Norma A.130)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {
+        "despeje_salida_m": {"valor": 1.2, "unidad": "m", "descripcion": "Distancia libre frente a una salida de emergencia. Confirmar en la norma."},
+        "ancho_evacuacion_m": {"valor": 1.2, "unidad": "m", "descripcion": "Ancho mínimo de la ruta de evacuación principal. Confirmar en la norma."},
+        "despeje_rociador_m": {"valor": 0.45, "unidad": "m", "descripcion": "Distancia libre entre la mercadería y los rociadores. Confirmar en la norma."}
+      }
+    },
+    {
+      "id": "itse",
+      "nombre": "Inspecciones Técnicas de Seguridad en Edificaciones (ITSE)",
+      "numero": "ITSE (normativa vigente de CENEPRED y municipalidades)",
+      "aplica_a": "Condiciones de seguridad que revisará el inspector municipal.",
+      "regla_modelo": "No genera restricción numérica; el programa resume lo que el inspector suele revisar (salidas, extintores, señalización, pasillos).",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/cenepred",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {}
+    },
+    {
+      "id": "senalizacion",
+      "nombre": "Señales de seguridad: colores, símbolos, formas y dimensiones",
+      "numero": "NTP 399.010-1",
+      "aplica_a": "Señalización de salidas, extintores, tableros y rutas de evacuación.",
+      "regla_modelo": "Debe existir al menos una salida de emergencia registrada; la colocación de las señales se revisa en campo.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/inacal (NTP 399.010-1)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {}
+    },
+    {
+      "id": "extintores",
+      "nombre": "Extintores portátiles: selección, distribución, inspección y mantenimiento",
+      "numero": "NTP 350.043-1",
+      "aplica_a": "Ubicación y acceso libre a los extintores.",
+      "regla_modelo": "Se eliminan los tramos a menos de {despeje_extintor_m} m de un extintor; cada estante debe tener un extintor a ≤ {distancia_max_extintor_m} m.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/inacal (NTP 350.043-1)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {
+        "despeje_extintor_m": {"valor": 1.0, "unidad": "m", "descripcion": "Espacio libre alrededor del extintor. Confirmar en la norma."},
+        "distancia_max_extintor_m": {"valor": 22.9, "unidad": "m", "descripcion": "Distancia máxima de recorrido hasta un extintor (riesgo clase A). Confirmar en la norma."}
+      }
+    },
+    {
+      "id": "accesibilidad",
+      "nombre": "Accesibilidad para personas con discapacidad y personas adultas mayores",
+      "numero": "Norma A.120 del Reglamento Nacional de Edificaciones",
+      "aplica_a": "Pasillos de atención al público (modo tienda).",
+      "regla_modelo": "En modo tienda, los pasillos de clientes deben medir al menos {ancho_pasillo_accesible_m} m.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/vivienda (Reglamento Nacional de Edificaciones, Norma A.120)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {
+        "ancho_pasillo_accesible_m": {"valor": 0.9, "unidad": "m", "descripcion": "Ancho libre mínimo de pasillo accesible. Confirmar en la norma."}
+      }
+    },
+    {
+      "id": "consumidor",
+      "nombre": "Código de Protección y Defensa del Consumidor",
+      "numero": "Ley 29571",
+      "aplica_a": "Exhibición de precios de los productos a la venta.",
+      "regla_modelo": "Todo producto exhibido debe tener precio de venta registrado para poder mostrarlo.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/indecopi (Ley 29571)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": null,
+      "parametros": {}
+    },
+    {
+      "id": "farmacia",
+      "nombre": "Manual de Buenas Prácticas de Almacenamiento de productos farmacéuticos, dispositivos médicos y productos sanitarios",
+      "numero": "RM 132-2015/MINSA",
+      "aplica_a": "Solo rubro farmacia / botica.",
+      "regla_modelo": "Ningún producto en el piso: el nivel más bajo utilizable empieza a {altura_minima_piso_m} m; productos refrigerados solo en equipos de frío.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/minsa (RM 132-2015/MINSA)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": ["farmacia"],
+      "parametros": {
+        "altura_minima_piso_m": {"valor": 0.15, "unidad": "m", "descripcion": "Altura mínima sobre el piso. Confirmar en la norma."}
+      }
+    },
+    {
+      "id": "alimentos",
+      "nombre": "Vigilancia sanitaria de alimentos y bebidas (DIGESA)",
+      "numero": "Reglamento sobre vigilancia y control sanitario de alimentos y bebidas (DIGESA)",
+      "aplica_a": "Rubros que venden alimentos o bebidas.",
+      "regla_modelo": "Alimentos y bebidas separados al menos {separacion_limpieza_m} m de productos de limpieza; nada sobre el piso por debajo de {altura_minima_piso_m} m.",
+      "tipo": "obligatoria",
+      "fuente": "https://www.gob.pe/minsa (DIGESA)",
+      "estado": "por verificar",
+      "fecha_revision": null,
+      "activa": true,
+      "rubros": ["abarrotes", "bazar"],
+      "parametros": {
+        "separacion_limpieza_m": {"valor": 1.0, "unidad": "m", "descripcion": "Separación mínima entre alimentos y productos de limpieza. Confirmar en la norma."},
+        "altura_minima_piso_m": {"valor": 0.10, "unidad": "m", "descripcion": "Altura mínima sobre el piso. Confirmar en la norma."}
+      }
+    }
+  ],
+  "reglas_negocio": [
+    {"id": "pesados_abajo", "nombre": "Lo pesado va abajo", "descripcion": "Productos de más de {umbral_kg} kg se penalizan por cada metro de altura.", "activa": true, "parametros": {"umbral_kg": {"valor": 5, "unidad": "kg"}}},
+    {"id": "fragil_no_debajo", "nombre": "Lo frágil no va debajo de lo pesado", "descripcion": "Los productos frágiles se penalizan en los niveles más bajos y el validador revisa que no queden debajo de un pesado en el mismo tramo.", "activa": true, "parametros": {}},
+    {"id": "incompatibles", "nombre": "Categorías incompatibles separadas", "descripcion": "Restricción dura: las categorías de la matriz de incompatibilidades deben quedar a la distancia mínima indicada.", "activa": true, "parametros": {}},
+    {"id": "fefo", "nombre": "FEFO en perecibles", "descripcion": "Los perecibles se ubican en altura cómoda para rotar 'primero en vencer, primero en salir'. El FEFO se aplica al reponer.", "activa": true, "parametros": {}},
+    {"id": "ninos_bajos", "nombre": "Productos para niños en estantes bajos", "descripcion": "Juguetes y artículos infantiles se penalizan por encima de {altura_max_m} m.", "activa": true, "parametros": {"altura_max_m": {"valor": 1.2, "unidad": "m"}}},
+    {"id": "valor_alto_controlado", "nombre": "Alto valor en zona controlada", "descripcion": "Restricción dura: productos de alto valor solo en estantes marcados como zona controlada.", "activa": true, "parametros": {}},
+    {"id": "stock_minimo", "nombre": "El stock mínimo siempre cabe", "descripcion": "Restricción dura: la posición elegida debe recibir al menos {dias_cobertura} días de venta (mínimo 1 unidad).", "activa": true, "parametros": {"dias_cobertura": {"valor": 7, "unidad": "días"}}}
+  ],
+  "incompatibilidades": [
+    {"categoria_a": "LIMPIEZA", "categoria_b": "BEBIDAS", "distancia_min_m": 1.0, "motivo": "Contaminación de alimentos y bebidas"},
+    {"categoria_a": "LIMPIEZA", "categoria_b": "ALIMENTOS", "distancia_min_m": 1.0, "motivo": "Contaminación de alimentos y bebidas"},
+    {"categoria_a": "FERRETERIA", "categoria_b": "ALIMENTOS", "distancia_min_m": 1.0, "motivo": "Químicos y solventes"}
+  ]
+}

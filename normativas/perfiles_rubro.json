@@ -1,0 +1,609 @@
+{
+  "_nota": "Perfiles de rubro. 'medidas_tipicas' = [largo_cm, ancho_cm, alto_cm, peso_kg] por categoría; se usan solo cuando falta la medida real y siempre se marcan como 'estimado'.",
+  "reglas_categoria_comunes": {
+    "BEBIDAS": [
+      "GASEOSA",
+      "AGUA",
+      "JUGO",
+      "NECTAR",
+      "BEBIDA",
+      "REFRESCO",
+      "ENERGIZANTE",
+      "CERVEZA",
+      "YOGURT"
+    ],
+    "ALIMENTOS": [
+      "GALLETA",
+      "CHOCOLATE",
+      "CARAMELO",
+      "CHUPETIN",
+      "GOMITA",
+      "CHICLE",
+      "SNACK",
+      "PAPAS",
+      "ARROZ",
+      "AZUCAR",
+      "ACEITE",
+      "FIDEO",
+      "ATUN",
+      "LECHE",
+      "CEREAL",
+      "AVENA",
+      "CAFE",
+      "WAFER",
+      "CHOCO",
+      "MANI",
+      "TURRON",
+      "BOMBON"
+    ],
+    "LIMPIEZA": [
+      "DETERGENTE",
+      "LEJIA",
+      "JABON",
+      "LAVAVAJILLA",
+      "DESINFECTANTE",
+      "LIMPIADOR",
+      "ESPONJA",
+      "ESCOBA",
+      "TRAPEADOR",
+      "RECOGEDOR",
+      "AMBIENTADOR",
+      "SUAVIZANTE",
+      "QUITAMANCHAS",
+      "PAPEL HIGIENICO",
+      "SERVILLETA"
+    ],
+    "BELLEZA": [
+      "SHAMPOO",
+      "CREMA",
+      "LABIAL",
+      "ESMALTE",
+      "MAQUILLAJE",
+      "PERFUME",
+      "COLONIA",
+      "TINTE",
+      "BROCHA",
+      "RIMEL",
+      "DELINEADOR",
+      "ACONDICIONADOR",
+      "PEINE",
+      "CEPILLO DE CABELLO",
+      "UÑAS",
+      "PESTAÑAS",
+      "SOMBRA"
+    ],
+    "COCINA": [
+      "OLLA",
+      "SARTEN",
+      "CUCHILLO",
+      "CUCHARA",
+      "TENEDOR",
+      "PLATO",
+      "TAZA",
+      "VASO",
+      "JARRA",
+      "TAPER",
+      "TUPPER",
+      "COLADOR",
+      "RALLADOR",
+      "TABLA DE PICAR",
+      "CUCHARON",
+      "ESPATULA",
+      "TERMO",
+      "LONCHERA"
+    ],
+    "PIÑATERIA": [
+      "GLOBO",
+      "PIÑATA",
+      "SERPENTINA",
+      "VELA",
+      "CUMPLEAÑOS",
+      "SORPRESA",
+      "GORRO DE FIESTA",
+      "CHISGUETE",
+      "CONFETI",
+      "GUIRNALDA",
+      "DECORACION"
+    ],
+    "LIBRERIA": [
+      "CUADERNO",
+      "LAPICERO",
+      "LAPIZ",
+      "BORRADOR",
+      "TAJADOR",
+      "REGLA",
+      "PLUMON",
+      "COLORES",
+      "CRAYOLA",
+      "PAPEL BOND",
+      "CARTULINA",
+      "GOMA",
+      "SILICONA",
+      "TIJERA",
+      "FOLDER",
+      "ARCHIVADOR",
+      "CINTA ADHESIVA",
+      "CORRECTOR",
+      "RESALTADOR",
+      "ESTUCHE",
+      "MOCHILA"
+    ],
+    "JUGUETERIA": [
+      "JUGUETE",
+      "MUÑECA",
+      "PELUCHE",
+      "PELOTA",
+      "CARRITO",
+      "ROMPECABEZAS",
+      "LEGO",
+      "DINOSAURIO",
+      "YOYO",
+      "BURBUJA",
+      "SLIME",
+      "PISTOLA DE AGUA"
+    ],
+    "FERRETERIA": [
+      "MARTILLO",
+      "DESARMADOR",
+      "ALICATE",
+      "LLAVE",
+      "TORNILLO",
+      "CLAVO",
+      "TALADRO",
+      "SIERRA",
+      "PERNO",
+      "CINTA AISLANTE",
+      "CANDADO",
+      "WINCHA",
+      "HUINCHA",
+      "PINTURA",
+      "THINNER",
+      "BROCA"
+    ],
+    "ELECTRICIDAD": [
+      "FOCO",
+      "LINTERNA",
+      "PILA",
+      "BATERIA",
+      "CARGADOR",
+      "CABLE",
+      "ENCHUFE",
+      "EXTENSION",
+      "AUDIFONO",
+      "PARLANTE",
+      "USB",
+      "LED"
+    ],
+    "HOGAR": [
+      "TOALLA",
+      "CORTINA",
+      "ALFOMBRA",
+      "COJIN",
+      "PERCHERO",
+      "GANCHO",
+      "CANASTA",
+      "ORGANIZADOR",
+      "BALDE",
+      "TINA",
+      "ESPEJO",
+      "RELOJ",
+      "FLORERO",
+      "MANTEL",
+      "SABANA",
+      "FRAZADA",
+      "LLAVERO",
+      "PARAGUAS"
+    ],
+    "ACCESORIOS": [
+      "ARETE",
+      "COLLAR",
+      "PULSERA",
+      "ANILLO",
+      "VINCHA",
+      "GANCHO DE CABELLO",
+      "COLET",
+      "BILLETERA",
+      "CARTERA",
+      "LENTE",
+      "CORREA",
+      "GORRA"
+    ]
+  },
+  "palabras_atributos": {
+    "fragil": [
+      "VIDRIO",
+      "CRISTAL",
+      "VASO",
+      "COPA",
+      "FOCO",
+      "ESPEJO",
+      "CERAMICA",
+      "PORCELANA",
+      "FLORERO",
+      "BOTELLA DE VIDRIO",
+      "ADORNO"
+    ],
+    "peligroso": [
+      "LEJIA",
+      "THINNER",
+      "ALCOHOL",
+      "INSECTICIDA",
+      "RAID",
+      "AEROSOL",
+      "SPRAY",
+      "ACIDO",
+      "SODA CAUSTICA",
+      "GAS",
+      "ENCENDEDOR",
+      "FOSFORO",
+      "COHETE",
+      "PIROTECNICO",
+      "SOLVENTE",
+      "PEGAMENTO INDUSTRIAL",
+      "PIROTECNIA"
+    ],
+    "perecible": [
+      "GALLETA",
+      "CHOCOLATE",
+      "LECHE",
+      "YOGURT",
+      "JUGO",
+      "NECTAR",
+      "GASEOSA",
+      "CARAMELO",
+      "GOMITA",
+      "PAN",
+      "QUESO",
+      "SNACK",
+      "CEREAL",
+      "CHOCO",
+      "WAFER"
+    ],
+    "ninos": [
+      "JUGUETE",
+      "NIÑO",
+      "NIÑA",
+      "INFANTIL",
+      "BEBE",
+      "PELUCHE",
+      "PELOTA",
+      "MUÑECA",
+      "CARRITO",
+      "DINOSAURIO",
+      "SLIME",
+      "BURBUJA",
+      "PIÑATA",
+      "SORPRESA"
+    ],
+    "no_girar": [
+      "LIQUIDO",
+      "SHAMPOO",
+      "ACEITE",
+      "BEBIDA",
+      "GASEOSA",
+      "JUGO",
+      "LEJIA",
+      "DETERGENTE LIQUIDO"
+    ]
+  },
+  "perfiles": {
+    "bazar": {
+      "nombre": "Bazar / tienda de variedades",
+      "descripcion": "Hogar, cocina, librería, piñatería, belleza, bebidas y abarrotes menores.",
+      "modo_sugerido": "tienda",
+      "normas_extra": [
+        "alimentos"
+      ],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.8,
+        "bajo": 0.45,
+        "alto": 0.55,
+        "bonus_cabecera": 0.2,
+        "bonus_caja": 0.3,
+        "bonus_flujo": 0.2
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          15,
+          10,
+          8,
+          0.3
+        ],
+        "HOGAR": [
+          20,
+          15,
+          10,
+          0.4
+        ],
+        "COCINA": [
+          22,
+          18,
+          12,
+          0.6
+        ],
+        "BEBIDAS": [
+          7,
+          7,
+          24,
+          0.7
+        ],
+        "ALIMENTOS": [
+          12,
+          6,
+          4,
+          0.08
+        ],
+        "LIMPIEZA": [
+          10,
+          7,
+          22,
+          0.8
+        ],
+        "BELLEZA": [
+          6,
+          4,
+          15,
+          0.2
+        ],
+        "PIÑATERIA": [
+          20,
+          12,
+          3,
+          0.1
+        ],
+        "LIBRERIA": [
+          21,
+          15,
+          2,
+          0.15
+        ],
+        "JUGUETERIA": [
+          20,
+          12,
+          10,
+          0.3
+        ],
+        "ACCESORIOS": [
+          10,
+          6,
+          2,
+          0.05
+        ],
+        "FERRETERIA": [
+          15,
+          8,
+          5,
+          0.4
+        ],
+        "ELECTRICIDAD": [
+          12,
+          8,
+          6,
+          0.2
+        ],
+        "ROPA DE MUJER": [
+          30,
+          25,
+          4,
+          0.4
+        ],
+        "ROPA DE HOMBRE": [
+          30,
+          25,
+          4,
+          0.45
+        ],
+        "DEPORTE": [
+          25,
+          20,
+          20,
+          0.4
+        ],
+        "ESCOLAR": [
+          21,
+          15,
+          3,
+          0.2
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "abarrotes": {
+      "nombre": "Abarrotes / bodega / minimarket",
+      "descripcion": "Alimentos, bebidas, limpieza y cuidado personal.",
+      "modo_sugerido": "tienda",
+      "normas_extra": [
+        "alimentos"
+      ],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.85,
+        "bajo": 0.5,
+        "alto": 0.6,
+        "bonus_cabecera": 0.25,
+        "bonus_caja": 0.35,
+        "bonus_flujo": 0.2
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          12,
+          8,
+          15,
+          0.5
+        ],
+        "BEBIDAS": [
+          8,
+          8,
+          28,
+          1.1
+        ],
+        "ALIMENTOS": [
+          15,
+          8,
+          20,
+          0.8
+        ],
+        "LIMPIEZA": [
+          12,
+          8,
+          25,
+          1.0
+        ],
+        "BELLEZA": [
+          6,
+          4,
+          15,
+          0.25
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "ferreteria": {
+      "nombre": "Ferretería",
+      "descripcion": "Herramientas, pinturas, gasfitería, electricidad.",
+      "modo_sugerido": "almacen",
+      "normas_extra": [],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.85,
+        "bajo": 0.6,
+        "alto": 0.5,
+        "bonus_cabecera": 0.15,
+        "bonus_caja": 0.25,
+        "bonus_flujo": 0.1
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          20,
+          10,
+          8,
+          0.8
+        ],
+        "FERRETERIA": [
+          25,
+          10,
+          6,
+          1.0
+        ],
+        "ELECTRICIDAD": [
+          15,
+          10,
+          8,
+          0.3
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "farmacia": {
+      "nombre": "Farmacia / botica",
+      "descripcion": "Medicamentos, dispositivos médicos y cuidado personal.",
+      "modo_sugerido": "almacen",
+      "normas_extra": [
+        "farmacia"
+      ],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.85,
+        "bajo": 0.5,
+        "alto": 0.6,
+        "bonus_cabecera": 0.2,
+        "bonus_caja": 0.3,
+        "bonus_flujo": 0.1
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          10,
+          5,
+          4,
+          0.08
+        ],
+        "BELLEZA": [
+          6,
+          4,
+          15,
+          0.2
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "ropa": {
+      "nombre": "Ropa y calzado",
+      "descripcion": "Prendas dobladas o en caja.",
+      "modo_sugerido": "tienda",
+      "normas_extra": [],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.9,
+        "bajo": 0.5,
+        "alto": 0.5,
+        "bonus_cabecera": 0.25,
+        "bonus_caja": 0.2,
+        "bonus_flujo": 0.25
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          30,
+          25,
+          5,
+          0.4
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "repuestos": {
+      "nombre": "Repuestos y autopartes",
+      "descripcion": "Piezas pequeñas y medianas, algunas pesadas.",
+      "modo_sugerido": "almacen",
+      "normas_extra": [],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.85,
+        "bajo": 0.6,
+        "alto": 0.5,
+        "bonus_cabecera": 0.1,
+        "bonus_caja": 0.2,
+        "bonus_flujo": 0.1
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          20,
+          15,
+          10,
+          1.5
+        ]
+      },
+      "incompatibilidades_extra": []
+    },
+    "libreria": {
+      "nombre": "Librería y útiles escolares",
+      "descripcion": "Cuadernos, útiles, papelería.",
+      "modo_sugerido": "tienda",
+      "normas_extra": [],
+      "factores_exposicion": {
+        "altura_ojos": 1.0,
+        "altura_manos": 0.85,
+        "bajo": 0.5,
+        "alto": 0.55,
+        "bonus_cabecera": 0.25,
+        "bonus_caja": 0.3,
+        "bonus_flujo": 0.2
+      },
+      "medidas_tipicas": {
+        "_defecto": [
+          21,
+          15,
+          2,
+          0.15
+        ],
+        "LIBRERIA": [
+          21,
+          15,
+          2,
+          0.15
+        ]
+      },
+      "incompatibilidades_extra": []
+    }
+  }
+}

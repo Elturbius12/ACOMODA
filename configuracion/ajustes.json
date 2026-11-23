@@ -1,0 +1,117 @@
+{
+  "_nota": "Parámetros de negocio editables. Cambie los valores y vuelva a abrir el programa. No cambie los nombres de las claves.",
+  "version_plantilla": "3.0",
+  "abc": {
+    "corte_a": 0.8,
+    "corte_b": 0.95
+  },
+  "solver": {
+    "tiempo_limite_s": 60,
+    "brecha_relativa": 0.01,
+    "candidatos_por_producto": 18,
+    "penalizacion_no_ubicado": 1000
+  },
+  "geometria": {
+    "ancho_tramo_m": 0.6,
+    "resolucion_grilla_m": 0.25,
+    "holgura_altura_cm": 3,
+    "altura_primer_nivel_m": 0.1,
+    "grosor_bandeja_m": 0.03,
+    "despeje_puerta_m": 1.0,
+    "ancho_pasillo_por_defecto_m": 0.9
+  },
+  "ergonomia": {
+    "altura_cadera_m": 0.75,
+    "altura_hombros_m": 1.4,
+    "altura_ojos_m": 1.55,
+    "costo_piso": 1.0,
+    "costo_sobre_hombros": 1.2
+  },
+  "objetivo": {
+    "peso_distancia": 1.0,
+    "peso_ergonomia": 0.5,
+    "peso_agrupar_categoria": 0.05,
+    "peso_pares_comprobante": 0.3,
+    "peso_reglas_blandas": 0.5,
+    "pares_comprobante_max": 30
+  },
+  "inventario": {
+    "dias_cobertura": 7,
+    "umbral_pesado_kg": 5,
+    "umbral_valor_alto_soles": 150
+  },
+  "operacion": {
+    "velocidad_caminata_m_s": 1.0,
+    "segundos_por_linea": 15,
+    "tarifa_hora_soles": 7.5,
+    "minutos_reubicar_producto": 4,
+    "dias_operacion_mes": 26,
+    "tasa_anual": 0.12,
+    "horizonte_meses": 24
+  },
+  "estimacion": {
+    "medida_maxima_cm": 300,
+    "unidades_por_caja": 12,
+    "maximo_apilado": 3
+  },
+  "estante_por_defecto": {
+    "tipo": "estante_metalico",
+    "niveles": 5,
+    "alto_m": 2.0,
+    "fondo_m": 0.5,
+    "capacidad_kg_nivel": 60,
+    "costo_soles": 450
+  },
+  "confiabilidad_local": {
+    "excel": 1.0,
+    "dxf": 1.0,
+    "imagen": 0.8,
+    "ejemplo": 0.5
+  },
+  "visual": {
+    "max_cajas_3d": 2000
+  },
+  "semilla": 42,
+  "diseno": {
+    "_nota": "Parámetros del diseño de racks (Cambio 1).",
+    "paso_candidatos_m": 0.5,
+    "resolucion_local_m": 0.1,
+    "limite_candidatos": 1500,
+    "modulos_en_modelo": 160,
+    "holgura_techo_m": 0.3,
+    "factor_llenado": 0.6,
+    "margen_capacidad": 1.35,
+    "lambda_inversion": 0.5,
+    "pasillo_equipo_mecanico_m": 1.8,
+    "zonas_sin_racks": [
+      "recepcion",
+      "despacho",
+      "devoluciones",
+      "cuarentena",
+      "caja",
+      "ingreso"
+    ]
+  },
+  "evidencia": {
+    "_nota": "Simulación con pedidos reales y estadística (Cambio 3).",
+    "muestra_pedidos": 5000,
+    "replicas_aleatorias": 30,
+    "remuestreos_bootstrap": 2000,
+    "muestra_shapiro": 500,
+    "velocidad_caminata_m_s": 1.0,
+    "segundos_por_producto": 15,
+    "umbrales": {
+      "reduccion_distancia_pct": 15,
+      "valor_p": 0.05,
+      "confiabilidad_pct": 70,
+      "recuperacion_max_meses": 24
+    }
+  },
+  "costeo": {
+    "_nota": "Valores iniciales del costeo editable (Cambio 2). Supuestos: confirmar.",
+    "etiquetado_por_modulo_soles": 15,
+    "senalizacion_soles": 150,
+    "capacitacion_horas": 4,
+    "personas_capacitadas": 2
+  }
+}

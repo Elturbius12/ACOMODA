@@ -1,0 +1,24 @@
+{
+  "ALMACEN|CANTIDAD|CANTIDADEQUIVALENCIA|CATEGORIA|CLIENTE|CODIGODEBARRA|COMPROBANTE|COSTO|DESCUENTO|EMPLEADOS|EQUIVALENCIA|FECHAHORA|MONEDA|N|OBSERVACION|PRECIOPROMEDIO|PRECIOXUNIDAD|PRODUCTO|SKU|SUBCATEGORIA|TIPO|TOTAL|UM|USUARIOS|VARIANTE": {
+    "fecha_hora": "FECHA/HORA",
+    "comprobante": "COMPROBANTE",
+    "codigo_barras": "CÓDIGO DE BARRA",
+    "sku": "SKU",
+    "producto": "PRODUCTO",
+    "cantidad": "CANTIDAD",
+    "precio_unitario": "PRECIO X UNIDAD",
+    "total": "TOTAL",
+    "costo": "COSTO*"
+  },
+  "CANTIDAD|CODIGOBARRAS|COMPROBANTE|COSTO|FECHAHORA|PRECIOUNITARIO|PRODUCTO|TOTAL": {
+    "fecha_hora": "fecha_hora",
+    "comprobante": "comprobante",
+    "codigo_barras": "codigo_barras",
+    "sku": null,
+    "producto": "producto",
+    "cantidad": "cantidad",
+    "precio_unitario": "precio_unitario",
+    "total": "total",
+    "costo": "costo"
+  }
+}

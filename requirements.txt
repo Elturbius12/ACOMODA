@@ -1,0 +1,17 @@
+# Acomoda — dependencias exactas (probadas con Python 3.14 en Windows 11)
+streamlit==1.67.0
+pulp==3.3.2
+plotly==7.1.0
+pandas==2.3.3
+numpy==2.5.2
+openpyxl==3.1.5
+pyarrow==26.0.0
+ezdxf==1.4.5
+pillow==12.3.0
+pymupdf==2.0
+streamlit-drawable-canvas==0.13.0
+matplotlib==3.11.1
+pytest==9.2.0
+scipy==1.18.1
+python-docx==1.2.0
+python-calamine==0.9.1
